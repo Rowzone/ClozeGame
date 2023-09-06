@@ -1,9 +1,11 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
 // import CircleStat3 from "../../assets/vectors/CircleStat3.svg";
 // import CircleStat2 from "../../assets/vectors/CircleStat2.svg";
 // import CircleStat1 from "../../assets/vectors/CircleStat1.svg";
 // import theme from "../../theme";
+import circleStat from "../assets/images/circleStat.png";
 
+/** 
 export function ActivitySet() {
   return (
     <View style={styles.root}>
@@ -29,12 +31,13 @@ export function ActivitySet() {
       <View style={styles.circleStat}>
         {/* <CircleStat3 />
         <CircleStat2 />
-        <CircleStat1 /> */}
+        <CircleStat1 /> }
         <Text style={styles.$34}>34%</Text>
       </View>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   root: {
@@ -168,3 +171,31 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
 });
+*/
+
+export function ActivitySet() {
+  return (
+    <View className="flex flex-col items-start bg-white w-96 h-42 rounded-2xl m-2 p-4">
+      <Text className="text-primary text-2xl font-extrabold ">
+        Your Activity
+      </Text>
+      <View className="flex flex-row items-start mt-4 p-4">
+        <Text className="text-primary font-extrabold text-6xl ml-4">5</Text>
+        <Text className="text-sm p-2">days</Text>
+        <Image source={circleStat} className="ml-16 pt-3 bottom-7" />
+      </View>
+      <View className="flex flex-row items-start">
+        <View className="h-2 w-4 rounded-lg mt-1 bg-gray-300" />
+        <Text className="text-center"> Easy </Text>
+        <View className="ml-3 flex flex-row">
+          <View className="h-2 w-4 rounded-lg mt-1 bg-primary" />
+          <Text className="text-center ml-1">Normal</Text>
+        </View>
+        <View className="ml-3 flex flex-row">
+          <View className="h-2 w-4 rounded-lg mt-1 bg-violet-950" />
+          <Text className="text-center ml-1">Normal</Text>
+        </View>
+      </View>
+    </View>
+  );
+}
