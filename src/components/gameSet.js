@@ -1,6 +1,7 @@
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import gameImage from "../assets/images/gameImage.png";
 
+/*
 export function GameSet() {
   return (
     <View style={styles.root}>
@@ -62,3 +63,18 @@ const styles = StyleSheet.create({
     borderRadius: 7,
   },
 });
+*/
+
+export function GameSet() {
+  return (
+    <View className="flex flex-col items-start justify-center gap-1 bg-white rounded-2xl w-96 h-70 m-2 p-2">
+      <Text className="text-primary text-2xl font-extrabold">Game</Text>
+      <Image source={gameImage} className="mb-2" />
+      <TouchableOpacity className="bg-violet-800 rounded-lg w-full p-3 ">
+        <Text className="text-center font-bold text-lg text-white">
+          Start Session
+        </Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
