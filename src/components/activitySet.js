@@ -175,14 +175,14 @@ const styles = StyleSheet.create({
 
 export function ActivitySet() {
   return (
-    <View className="flex flex-col items-start bg-white w-96 h-42 rounded-2xl m-2 p-4">
+    <View className="flex flex-col items-start bg-white w-96 h-1/7 rounded-2xl m-2 p-3">
       <Text className="text-primary text-2xl font-extrabold ">
         Your Activity
       </Text>
       <View className="flex flex-row items-start mt-4 p-4">
-        <Text className="text-primary font-extrabold text-6xl ml-4">5</Text>
+        <Text className="text-primary font-extrabold text-6xl ml-3">5</Text>
         <Text className="text-sm p-2">days</Text>
-        <Image source={circleStat} className="ml-16 pt-3 bottom-7" />
+        <Image source={circleStat} className="ml-16 pt-2 bottom-7" />
       </View>
       <View className="flex flex-row items-start">
         <View className="h-2 w-4 rounded-lg mt-1 bg-gray-300" />

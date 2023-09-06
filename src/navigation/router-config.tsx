@@ -8,6 +8,7 @@ import Signup from "../screens/signup";
 import Onboarding from "../screens/appInfo";
 import Home from "../screens/Home";
 import Menu from "../screens/menu";
+import ProgressPage from "../screens/menu/ProgressPage";
 import GameSession from "../screens/gameSession";
 import GameModel from "../screens/gameModel";
 import GameSet1 from "../screens/gameStage1";
@@ -25,6 +26,8 @@ const RouterConfig = () => {
         <Stack.Screen name="SignIn" component={Login} />
         <Stack.Screen name="SignUp" component={Signup} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Menu" component={Menu} />
+        <Stack.Screen name="ProgressPage" component={ProgressPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

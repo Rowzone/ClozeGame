@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
 
 export function GameSet() {
   return (
-    <View className="flex flex-col items-start justify-center gap-1 bg-white rounded-2xl w-96 h-70 m-2 p-2">
+    <View className="flex flex-col items-start justify-center gap-1 bg-white rounded-2xl w-96 h-70 m-2 p-3">
       <Text className="text-primary text-2xl font-extrabold">Game</Text>
       <Image source={gameImage} className="mb-2" />
       <TouchableOpacity className="bg-violet-800 rounded-lg w-full p-3 ">
