@@ -3,12 +3,15 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import profileImage from "../assets/images/userProfile.png";
 // import theme from "../../theme";
 
+/*
 export function ProgressCard() {
   return (
     <View style={styles.root}>
-      <Image source={profileImage} />
+      <View style={styles.ellipse34}>
+        <Image source={profileImage} />
+      </View>
       <View style={styles.frame13} />
-      <Text style={styles.hydeRowland}>Hyde Rowland</Text>
+        <Text style={styles.hydeRowland}>Hyde Rowland</Text>
       <View style={styles.progressBar}>
         <View style={styles.rectangle7} />
         <View style={styles.rectangle8} />
@@ -83,3 +86,22 @@ const styles = StyleSheet.create({
     // lineHeight: "normal",
   },
 });
+*/
+
+export function ProgressCard() {
+  return (
+    <View className="flex flex-row w-96 h-28 gap-3 bg-white rounded-2xl p-3 m-2">
+      <Image source={profileImage} className="w-15 h-15 mb-3 rounded-full" />
+      <View className="flex flex-col items-start">
+        <Text className="text-primary text-2xl font-extrabold">
+          HydeRowland
+        </Text>
+        <View className="flex flex-row mt-1">
+          <View className="w-4 h-1 bg-primary rounded-md" />
+          <View className="w-60 h-1 bg-gray-200" />
+        </View>
+        <Text className=" text-gray-400">stats here</Text>
+      </View>
+    </View>
+  );
+}

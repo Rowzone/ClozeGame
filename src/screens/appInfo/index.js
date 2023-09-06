@@ -23,60 +23,78 @@ import bg from "../../assets/images/signUpBG.png";
 
 import data from "../../constants/data";
 
-const Onboarding = () => {
+const Onboarding = ({ navigation }) => {
   const isCarousel = React.useRef(null);
   const [index, setIndex] = React.useState(0);
   const [showBtn, setShowBtn] = React.useState(false);
   return (
-    <SafeAreaView style={{ flex: 1, width: "100%", backgroundColor: "#fff" }}>
+    <View className="flex-1">
       <ImageBackground source={bg} resizeMode="cover" style={styles.image}>
-        <Text>Text goes here</Text>
-        <View style={styles.container}>
-          <Carousel
-            layout="tinder"
-            layoutCardOffset={9}
-            ref={isCarousel}
-            data={data}
-            renderItem={CarouselCardItem}
-            sliderWidth={SLIDER_WIDTH}
-            itemWidth={ITEM_WIDTH}
-            itemHeight={ITEM_HEIGHT}
-            sliderHeight={SLIDER_HEIGHT}
-            inactiveSlideShift={0}
-            onSnapToItem={(index) => {
-              setIndex(index);
-              if (index === data.length - 1) {
-                setShowBtn(true);
-              } else {
-                setShowBtn(false);
-              }
-            }}
-            useScrollView={true}
-          />
-          <Pagination
-            dotsLength={data.length}
-            activeDotIndex={index}
-            carouselRef={isCarousel}
-            dotStyle={{
-              width: 10,
-              height: 10,
-              borderRadius: 5,
-              marginHorizontal: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.92)",
-            }}
-            inactiveDotOpacity={0.4}
-            inactiveDotScale={0.6}
-            tappableDots={true}
-          />
+        <SafeAreaView className="">
+          <Text className="text-center">Text goes here</Text>
+          <View className="" style={styles.container}>
+            <Carousel
+              layout="tinder"
+              layoutCardOffset={9}
+              ref={isCarousel}
+              data={data}
+              renderItem={CarouselCardItem}
+              sliderWidth={SLIDER_WIDTH}
+              itemWidth={ITEM_WIDTH}
+              itemHeight={ITEM_HEIGHT}
+              sliderHeight={SLIDER_HEIGHT}
+              inactiveSlideShift={0}
+              onSnapToItem={(index) => {
+                setIndex(index);
+                if (index === data.length - 1) {
+                  setShowBtn(true);
+                } else {
+                  setShowBtn(false);
+                }
+              }}
+              useScrollView={true}
+            />
+            <Pagination
+              dotsLength={data.length}
+              activeDotIndex={index}
+              carouselRef={isCarousel}
+              dotStyle={{
+                width: 10,
+                height: 10,
+                borderRadius: 5,
+                marginHorizontal: 0,
+                backgroundColor: "rgba(0, 0, 0, 0.92)",
+              }}
+              inactiveDotOpacity={0.4}
+              inactiveDotScale={0.6}
+              tappableDots={true}
+            />
 
-          {showBtn && (
-            <TouchableOpacity onPress={() => {}} style={styles.button}>
-              <Text style={{ color: "#fff", fontSize: 18 }}>Next</Text>
-            </TouchableOpacity>
-          )}
-        </View>
+            {showBtn && (
+              <View
+                className="px-6"
+                style={{ alignItems: "center", marginTop: 20 }}
+              >
+                <TouchableOpacity
+                  className="w-80"
+                  onPress={() => navigation.navigate("SignIn")}
+                  style={{
+                    height: 50,
+                    borderRadius: 5,
+                    backgroundColor: "#916DD2",
+                    justifyContent: "center",
+                    alignContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Text style={{ fontSize: 20, color: "white" }}>Next</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+          </View>
+        </SafeAreaView>
       </ImageBackground>
-    </SafeAreaView>
+    </View>
   );
 };
 
