@@ -7,14 +7,13 @@ export function ProgressCard() {
   return (
     <View style={styles.root}>
       <Image source={profileImage} />
-      <View style={styles.frame13}>
-        <Text style={styles.hydeRowland}>Hyde Rowland</Text>
-        <View style={styles.progressBar}>
-          <View style={styles.rectangle7} />
-          <View style={styles.rectangle8} />
-        </View>
-        <Text style={styles.statsHere}>stats here</Text>
+      <View style={styles.frame13} />
+      <Text style={styles.hydeRowland}>Hyde Rowland</Text>
+      <View style={styles.progressBar}>
+        <View style={styles.rectangle7} />
+        <View style={styles.rectangle8} />
       </View>
+      <Text style={styles.statsHere}>stats here</Text>
     </View>
   );
 }
