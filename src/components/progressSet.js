@@ -1,7 +1,9 @@
 import { StyleSheet, View, Text, Image } from "react-native";
 import progress1 from "../assets/images/homeProgress1.png";
 import progress2 from "../assets/images/homeProgress2.png";
-
+import circleIcon1 from "../assets/images/circleIcon1.png";
+import circleIcon from "../assets/images/circleIcon.png";
+/*
 export function ProgressSet() {
   return (
     <View style={styles.root}>
@@ -103,3 +105,26 @@ const styles = StyleSheet.create({
     gap: 15,
   },
 });
+*/
+
+export function ProgressSet() {
+  return (
+    <View className=" flex flex-col bg-white rounded-2xl w-96 h-60 m-2 p-6">
+      <Text className="text-primary text-2xl font-extrabold">
+        Your progress
+      </Text>
+      <View className="flex flex-row gap-8 bottom-1 mt-0">
+        <Image source={circleIcon1} />
+        <Image source={circleIcon} />
+      </View>
+      <View className="flex flex-row  ">
+        <Text className="text-sm left-4">Memory</Text>
+        <Text className="text-sm left-12">Adaptiveness</Text>
+      </View>
+      <View className="flex flex-row gap-12 items-center">
+        <Text className="text-sm left-7">20%</Text>
+        <Text className="text-sm left-12">5%</Text>
+      </View>
+    </View>
+  );
+}

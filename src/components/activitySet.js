@@ -193,7 +193,7 @@ export function ActivitySet() {
         </View>
         <View className="ml-3 flex flex-row">
           <View className="h-2 w-4 rounded-lg mt-1 bg-violet-950" />
-          <Text className="text-center ml-1">Normal</Text>
+          <Text className="text-center ml-1">Hard</Text>
         </View>
       </View>
     </View>
